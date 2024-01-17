@@ -16,6 +16,22 @@ const AllBooksContainer = () => {
 
     }
 
+    function handleFavourite(bookId) {
+        console.log(bookId)
+        const bookIndex = books.findIndex(book => book.id === bookId)
+
+        console.log(bookIndex)
+
+        const newBook = [...books]
+
+        console.log(newBook)
+
+        newBook[bookIndex].isFavourite=!newBook[bookIndex].isFavourite
+
+        setBooks(newBook)
+
+    }
+
     return (
         <Fragment>
 
@@ -45,7 +61,7 @@ const AllBooksContainer = () => {
                     </div>
                 </header>
 
-                <Books booksData={books} />
+                <Books booksData={books} handleFavourite={handleFavourite} />
                 {/* Books */}
 
 
