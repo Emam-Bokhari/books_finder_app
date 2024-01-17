@@ -1,10 +1,11 @@
 import { Fragment } from "react"
 import Searchbox from "./Searchbox"
 import Sort from "./Sort"
-
 import Books from "./Books";
+import booksData from "./../../public/booksData.json"
 
 const AllBooksContainer = () => {
+
     return (
         <Fragment>
 
@@ -34,8 +35,9 @@ const AllBooksContainer = () => {
                     </div>
                 </header>
 
+                <Books booksData={booksData} />
                 {/* Books */}
-                <Books />
+
 
             </main>
 
