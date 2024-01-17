@@ -1,6 +1,7 @@
 import { Fragment } from "react"
 import Navbar from "./Navbar"
 import AllBooksContainer from "./AllBooksContainer/AllBooksContainer"
+import Footer from "./Footer"
 
 const App = () => {
   return (
@@ -9,6 +10,8 @@ const App = () => {
       <Navbar />
 
       <AllBooksContainer />
+
+      <Footer />
 
     </Fragment>
   )
