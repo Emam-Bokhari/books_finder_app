@@ -10,7 +10,7 @@ const Books = ({ booksData }) => {
             >
                 {/* book item */}
                 {booksData.map((book)=>(
-                <div className="space-y-3">
+                <div key={book.id} className="space-y-3">
                     {/* thumbnail */}
                     <div
                         className="flex items-center justify-center rounded-md border border-[#324251]/30 bg-white p-4"
@@ -19,7 +19,7 @@ const Books = ({ booksData }) => {
                     </div>
 
                     {/* info */}
-                    <div key={book.id} className="space-y-3">
+                    <div  className="space-y-3">
                         <h4 className="text-lg font-bold lg:text-xl">{book.bookName}</h4>
                         <p className="text-xs lg:text-sm">By : <span>{book.author}</span></p>
                         <div className="flex items-center justify-between">

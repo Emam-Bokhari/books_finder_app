@@ -1,10 +1,20 @@
-import { Fragment } from "react"
+import { Fragment, useState } from "react"
 import Searchbox from "./Searchbox"
 import Sort from "./Sort"
 import Books from "./Books";
 import booksData from "./../../public/booksData.json"
 
 const AllBooksContainer = () => {
+
+    const [books, setBooks] = useState(booksData)
+
+    function onSearch(searchTerm) {
+        // console.log(searchTerm)
+        const searchByBookName = books.filter(book => book.bookName.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()))
+
+        setBooks(searchByBookName)
+
+    }
 
     return (
         <Fragment>
@@ -25,7 +35,7 @@ const AllBooksContainer = () => {
                             </h2>
 
                             {/* searchbox */}
-                            <Searchbox />
+                            <Searchbox onSearch={onSearch} />
 
                         </div>
 
@@ -35,7 +45,7 @@ const AllBooksContainer = () => {
                     </div>
                 </header>
 
-                <Books booksData={booksData} />
+                <Books booksData={books} />
                 {/* Books */}
 
 
