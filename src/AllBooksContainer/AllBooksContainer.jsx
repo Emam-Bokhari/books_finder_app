@@ -8,6 +8,7 @@ const AllBooksContainer = () => {
 
     const [books, setBooks] = useState(booksData)
 
+    // search by book name
     function onSearch(searchTerm) {
         // console.log(searchTerm)
         const searchByBookName = books.filter(book => book.bookName.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()))
@@ -16,6 +17,7 @@ const AllBooksContainer = () => {
 
     }
 
+    // favourite
     function handleFavourite(bookId) {
         console.log(bookId)
         const bookIndex = books.findIndex(book => book.id === bookId)
@@ -26,9 +28,32 @@ const AllBooksContainer = () => {
 
         console.log(newBook)
 
-        newBook[bookIndex].isFavourite=!newBook[bookIndex].isFavourite
+        newBook[bookIndex].isFavourite = !newBook[bookIndex].isFavourite
 
         setBooks(newBook)
+
+    }
+
+    // sorting
+    function onSort(sort) {
+
+        if (sort === "nameAsc") {
+            const newBooks = [...books]
+            const sortedBooks = newBooks.sort((a, b) => a.bookName.localeCompare(b.bookName))
+            setBooks(sortedBooks);
+        } else if (sort === "nameDesc") {
+            const newBooks = [...books]
+            const sortedBooks = newBooks.sort((a, b) => b.bookName.localeCompare(a.bookName))
+            setBooks(sortedBooks)
+        } else if (sort === "yearAsc") {
+            const newBooks = [...books]
+            const sortedBooks = newBooks.sort((a, b) => new Date(a.publishedDate) - new Date(b.publishedDate))
+            setBooks(sortedBooks)
+        } else if (sort === "yearDesc") {
+            const newBooks = [...books]
+            const sortedBooks = newBooks.sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate))
+            setBooks(sortedBooks)
+        }
 
     }
 
@@ -56,7 +81,7 @@ const AllBooksContainer = () => {
                         </div>
 
                         {/* sort */}
-                        <Sort />
+                        <Sort onSort={onSort} />
 
                     </div>
                 </header>

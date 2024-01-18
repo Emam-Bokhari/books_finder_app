@@ -4,7 +4,7 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { MdOutlineFavorite } from "react-icons/md";
 
-const Books = ({ booksData,handleFavourite }) => {
+const Books = ({ booksData, handleFavourite }) => {
     return (
         <Fragment>
             <div
@@ -23,7 +23,12 @@ const Books = ({ booksData,handleFavourite }) => {
                         {/* info */}
                         <div className="space-y-3">
                             <h4 className="text-lg font-bold lg:text-xl">{book.bookName}</h4>
-                            <p className="text-xs lg:text-sm">By : <span>{book.author}</span></p>
+
+                            <div className="flex items-center justify-between">
+                                <p className="text-xs lg:text-sm">By : <span>{book.author}</span></p>
+                                <p className="text-xs lg:text-sm">Published : <span>{book.publishedDate}</span></p>
+                            </div>
+
                             <div className="flex items-center justify-between">
                                 <h4 className="text-lg font-bold lg:text-xl">${book.price}</h4>
                                 {/* starts */}
