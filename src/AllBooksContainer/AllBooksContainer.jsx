@@ -43,20 +43,35 @@ const AllBooksContainer = () => {
     function onSort(sort) {
 
         if (sort === "nameAsc") {
+
             const newBooks = [...books]
+
             const sortedBooks = newBooks.sort((a, b) => a.bookName.localeCompare(b.bookName))
+
             setBooks(sortedBooks);
+
         } else if (sort === "nameDesc") {
+
             const newBooks = [...books]
+
             const sortedBooks = newBooks.sort((a, b) => b.bookName.localeCompare(a.bookName))
+
             setBooks(sortedBooks)
+
         } else if (sort === "yearAsc") {
+
             const newBooks = [...books]
+
             const sortedBooks = newBooks.sort((a, b) => new Date(a.publishedDate) - new Date(b.publishedDate))
+
             setBooks(sortedBooks)
+
         } else if (sort === "yearDesc") {
+
             const newBooks = [...books]
+
             const sortedBooks = newBooks.sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate))
+
             setBooks(sortedBooks)
         }
 
