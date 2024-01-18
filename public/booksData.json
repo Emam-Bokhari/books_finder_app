@@ -6,6 +6,10 @@
     "image": "https://m.media-amazon.com/images/I/41VvIauMuuL._SY445_SX342_.jpg",
     "price": 62,
     "ratings": 4,
+    "ratingsStar": {
+      "id": 1,
+      "rating": [1, 2, 3, 4]
+    },
     "publishedDate": "2022-01-17",
     "isFavourite": ""
   },
@@ -15,7 +19,11 @@
     "author": "Eric Matthes",
     "image": "https://m.media-amazon.com/images/I/5176PR3oK5L._SX342_SY445_.jpg",
     "price": 45,
-    "ratings": 5,
+    "ratings": 3,
+    "ratingsStar": {
+      "id": 2,
+      "rating": [1, 2, 3]
+    },
     "publishedDate": "2022-02-20",
     "isFavourite": ""
   },
@@ -26,8 +34,12 @@
     "image": "https://m.media-amazon.com/images/I/61FmuzUH8AL._SY466_.jpg",
     "price": 30,
     "ratings": 5,
+    "ratingsStar": {
+      "id": 3,
+      "rating": [1, 2, 3, 4, 5]
+    },
     "publishedDate": "2021-12-10",
-    "isFavourite":""
+    "isFavourite": ""
   },
   {
     "id": 3,
@@ -36,6 +48,10 @@
     "image": "https://m.media-amazon.com/images/I/41bOkXnNBjL._SY445_SX342_.jpg",
     "price": 55,
     "ratings": 3,
+    "ratingsStar": {
+      "id": 4,
+      "rating": [1, 2, 3]
+    },
     "publishedDate": "2022-03-15",
     "isFavourite": ""
   },
@@ -46,6 +62,10 @@
     "image": "https://m.media-amazon.com/images/I/51p6-DZRWKL._SX342_SY445_.jpg",
     "price": 75,
     "ratings": 4,
+    "ratingsStar": {
+      "id": 5,
+      "rating": [1, 2, 3, 4]
+    },
     "publishedDate": "2022-01-30",
     "isFavourite": ""
   },
@@ -56,6 +76,10 @@
     "image": "https://m.media-amazon.com/images/I/91aTXNEtdjL._SY466_.jpg",
     "price": 20,
     "ratings": 5,
+    "ratingsStar": {
+      "id": 6,
+      "rating": [1, 2, 3, 4, 5]
+    },
     "publishedDate": "2021-11-25",
     "isFavourite": ""
   },
@@ -66,6 +90,10 @@
     "image": "https://m.media-amazon.com/images/I/519c6woRbpL._SX342_SY445_.jpg",
     "price": 18,
     "ratings": 4,
+    "ratingsStar": {
+      "id": 7,
+      "rating": [1, 2, 3, 4]
+    },
     "publishedDate": "2021-10-12",
     "isFavourite": ""
   },
@@ -76,6 +104,10 @@
     "image": "https://m.media-amazon.com/images/I/51XdUphJ7QL._SY445_SX342_.jpg",
     "price": 40,
     "ratings": 5,
+    "ratingsStar": {
+      "id": 8,
+      "rating": [1, 2, 3, 4, 5]
+    },
     "publishedDate": "2022-04-05",
     "isFavourite": ""
   },
@@ -86,7 +118,11 @@
     "image": "https://m.media-amazon.com/images/I/51t-xSmshTL._SY445_SX342_.jpg",
     "price": 28,
     "ratings": 5,
+    "ratingsStar": {
+      "id": 9,
+      "rating": [1, 2, 3, 4, 5]
+    },
     "publishedDate": "2022-05-20",
-    "isFavourite":""
+    "isFavourite": ""
   }
 ]

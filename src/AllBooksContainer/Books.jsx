@@ -33,10 +33,9 @@ const Books = ({ booksData, handleFavourite }) => {
                                 <h4 className="text-lg font-bold lg:text-xl">${book.price}</h4>
                                 {/* starts */}
                                 <div className="flex items-center space-x-1">
-                                    <img src={star} />
-                                    <img src={star} />
-                                    <img src={star} />
-                                    <img src={star} />
+                                    {book.ratingsStar.rating.map((stars) => (
+                                        <img key={stars.id} src={star} />
+                                    ))}
                                     <span className="text-xs lg:text-sm">({book.ratings} Star)</span>
                                 </div>
                                 {/* end */}

@@ -10,10 +10,15 @@ const AllBooksContainer = () => {
 
     // search by book name
     function onSearch(searchTerm) {
-        // console.log(searchTerm)
-        const searchByBookName = books.filter(book => book.bookName.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()))
+        if (searchTerm.trim() === "") {
+            setBooks(booksData)
+        }
+        else {
+            // console.log(searchTerm)
+            const searchByBookName = books.filter(book => book.bookName.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()))
 
-        setBooks(searchByBookName)
+            setBooks(searchByBookName)
+        }
 
     }
 
